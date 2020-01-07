@@ -4,10 +4,12 @@ const typeDefs = gql`
   type Query {
     users: [User]
     userById(id: Int!): User
+    books: [Book]
   }
 
   type Mutation {
     createUser(input: UserInput): User
+    createBook(input: BookInput): Book
   }
 `;
 

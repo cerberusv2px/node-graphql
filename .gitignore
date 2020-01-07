@@ -34,4 +34,3 @@ coverage
 # Vim swp files
 *.swp
 
-.env

@@ -1,14 +1,16 @@
 import { ApolloServer } from 'apollo-server-express';
-import { userModule } from './modules';
+import { UserModule, BookModule } from './modules';
 import Api from './api.schema';
 
 const typeDefs = [
-  userModule.Users,
-  Api
+  Api,
+  UserModule.Users,
+  BookModule.Books
 ];
 
 const resolvers = [
-  userModule.UserResolver
+  UserModule.UserResolver,
+  BookModule.BookResolver
 ];
 
 export default new ApolloServer({

@@ -1,3 +1,4 @@
-import * as userModule from './user';
+import * as UserModule from './user';
+import * as BookModule from './book';
 
-export { userModule };
+export { UserModule, BookModule };
