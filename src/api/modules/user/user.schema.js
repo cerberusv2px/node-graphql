@@ -10,6 +10,7 @@ const Users = gql`
     id: Int
     name: String
     address: String
+    books: [Book]
   }
 `;
 

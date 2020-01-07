@@ -6,4 +6,12 @@ export default class Book extends Model {
   static get tableName() {
     return TABLE_NAME;
   }
+
+  static get modifiers() {
+    return {
+      defaultSelects(builder) {
+        builder.select('id', 'name');
+      }
+    };
+  }
 }

@@ -3,7 +3,7 @@ import { User } from '../models';
 class UserService {
   async list() {
     try {
-      return await User.query();
+      return await User.query().withGraphFetched('[books(defaultSelects)]');
     } catch (err) {
       throw err;
     }
