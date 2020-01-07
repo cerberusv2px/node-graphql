@@ -23,10 +23,10 @@ app.set('host', APP_HOST);
 
 app.use(helmet());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(errorHandler.bodyParser);
 app.use(compression());
-app.use(morgan('tiny', {stream: logStream}));
+app.use(morgan('tiny', { stream: logStream }));
 app.use(json);
 
 GraphQLServer.applyMiddleware({

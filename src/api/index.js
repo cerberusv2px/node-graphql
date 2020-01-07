@@ -17,7 +17,7 @@ export default new ApolloServer({
   typeDefs,
   resolvers,
   cors: true,
-  context: ({req, connection}) => {
+  context: ({ req, connection }) => {
     if (connection) {
       return connection.context;
     }

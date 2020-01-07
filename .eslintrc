@@ -4,38 +4,19 @@
     "node": true,
     "mocha": true
   },
-  "extends": [
-    "prettier",
-    "eslint:recommended"
-  ],
+  "extends": ["eslint-config-airbnb-base", "prettier"],
   "parserOptions": {
-    "ecmaVersion": 2017,
+    "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": [
-    "prettier"
-  ],
   "rules": {
-    "semi": 2,
-    "curly": 2,
-    "no-var": 2,
-    "eqeqeq": 2,
-    "eol-last": 2,
-    "key-spacing": 2,
-    "require-await": 2,
-    "spaced-comment": 2,
-    "space-infix-ops": 2,
-    "no-return-await": 2,
-    "no-await-in-loop": 2,
-    "space-before-blocks": 2,
-    "newline-before-return": 2,
-    "no-useless-catch": 0,
-    "linebreak-style": [2, "unix"],
-    "indent": [2, 2, {"SwitchCase": 1}],
-    "object-curly-spacing": [2, "always"],
-    "camelcase": [2, {"properties": "never"}],
-    "quotes": [2, "single", {"allowTemplateLiterals": true}],
-    "no-unused-vars": ["error", {"argsIgnorePattern": "next"}],
-    "prettier/prettier": ["error", {"singleQuote": true, "bracketSpacing": true, "printWidth": 120}]
+    "camelcase": [
+      "error",
+      {
+        "properties": "never"
+      }
+    ],
+    "new-cap": 1,
+    "import/prefer-default-export": 1
   }
 }
