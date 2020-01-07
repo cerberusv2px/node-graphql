@@ -1,11 +1,11 @@
 import { ApolloServer } from 'apollo-server-express';
-import { UserModule, BookModule } from './modules';
+import { BookModule, UserModule } from './modules';
 import Api from './api.schema';
 
 const typeDefs = [
   Api,
   UserModule.Users,
-  BookModule.Books
+  BookModule.Books,
 ];
 
 const resolvers = [

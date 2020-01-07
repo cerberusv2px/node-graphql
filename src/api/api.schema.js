@@ -1,15 +1,15 @@
 import { gql } from 'apollo-server-express';
+import { BookModule, UserModule } from './modules';
 
 const typeDefs = gql`
-  type Query {
-    users: [User]
-    userById(id: Int!): User
-    books: [Book]
+  type Query{
+    ${UserModule.UserApi.UserQuery}
+    ${BookModule.BookApi.BookQuery}
   }
-
+  
   type Mutation {
-    createUser(input: UserInput): User
-    createBook(input: BookInput): Book
+    ${UserModule.UserApi.UserMutation}
+    ${BookModule.BookApi.BookMutation}
   }
 `;
 
